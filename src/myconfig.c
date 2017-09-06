@@ -36,7 +36,7 @@ static const char *PACKAGE_BUGREPORT = "http://code.google.com/p/mentohust/issue
 #define SERVICE_SIZE		127	/* 服务名最大长度 */
 #define MAX_PATH			255	/* FILENAME_MAX */
 #define D_TIMEOUT			8	/* 默认超时间隔 */
-#define D_ECHOINTERVAL		30	/* 默认心跳间隔 */
+#define D_ECHOINTERVAL		20	/* 默认心跳间隔 */
 #define D_RESTARTWAIT		15	/* 默认重连间隔 */
 #define D_STARTMODE			0	/* 默认组播模式 */
 #define D_DHCPMODE			0	/* 默认DHCP模式 */
@@ -49,7 +49,7 @@ static const char *PACKAGE_BUGREPORT = "http://code.google.com/p/mentohust/issue
 #ifdef MAC_OS
 static const char *D_DHCPSCRIPT = "dhcping -v -t 15";	/* 默认DHCP脚本 */
 #else
-static const char *D_DHCPSCRIPT = "dhclient";	/* 默认DHCP脚本 */
+static const char *D_DHCPSCRIPT = "dhcpcd";	/* 默认DHCP脚本 */
 #endif
 static const char *CFG_FILE = "/etc/mentohust.conf";	/* 配置文件 */
 static const char *LOG_FILE = "/tmp/mentohust.log";	/* 日志文件 */
