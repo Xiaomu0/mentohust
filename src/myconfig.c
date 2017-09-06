@@ -49,7 +49,7 @@ static const char *PACKAGE_BUGREPORT = "http://code.google.com/p/mentohust/issue
 #ifdef MAC_OS
 static const char *D_DHCPSCRIPT = "dhcping -v -t 15";	/* 默认DHCP脚本 */
 #else
-static const char *D_DHCPSCRIPT = "dhcpcd";	/* 默认DHCP脚本 */
+static const char *D_DHCPSCRIPT = "dhclient";	/* 默认DHCP脚本 */
 #endif
 static const char *CFG_FILE = "/etc/mentohust.conf";	/* 配置文件 */
 static const char *LOG_FILE = "/tmp/mentohust.log";	/* 日志文件 */
