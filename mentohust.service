@@ -1,0 +1,12 @@
+[Unit]
+Description=Mentohust Service
+Requires=network.target
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/path/to/mentohust
+ExecStop=/path/to/mentohust -k
+
+[Install]
+WantedBy=multi-user.target
