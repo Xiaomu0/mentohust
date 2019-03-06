@@ -7,39 +7,39 @@ A fork of hyrathb/mentohust dealing with SCAU network
 ### 编译
 获取源代码
 
-```$ git clone https://github.com/X1aomu/mentohust.git```
+`$ git clone https://github.com/X1aomu/mentohust.git`
 
 编译
 
-```$ cd mentohust && ./autogen.sh && ./configure && make```
+`$ cd mentohust && ./autogen.sh && ./configure && make`
 
 ### 运行
 首先切换到可执行文件所在目录（以下所有操作省略此说明）
 
-```$ cd ./src```
+`$ cd ./src`
 
 运行（需要 root 权限）
 
-```$ sudo ./mentohust -uUsername -pPassword```（自行替换 Username 和 Password）
+`$ sudo ./mentohust -uUsername -pPassword`（自行替换 Username 和 Password）
 
-首次运行会把参数保存到配置文件，认证成功后下次只需 ```$ sudo ./mentohust``` 即可
+首次运行会把参数保存到配置文件，认证成功后下次只需 `$ sudo ./mentohust` 即可
 
 ### 退出
-不以后台模式运行 mentohust 时，按 Ctrl + C 即可退出，后台运行时使用 ```$ sudo ./mentohust -k``` 退出认证。
+不以后台模式运行 mentohust 时，按 Ctrl + C 即可退出，后台运行时使用 `$ sudo ./mentohust -k` 退出认证。
 
 ### 开机自动运行（适用于使用 systemd 的系统）
 将 mentohust.service 文件复制到 /etc/systemd/system 目录下，并更改相应的信息，主要是 mentohust 可执行文件的路径，然后运行以下命令：
 
-```$ sudo systemctl daemond-reload```
+`$ sudo systemctl daemond-reload`
 
-```$ sudo systemctl enable mentohust```
+`$ sudo systemctl enable mentohust`
 
 如需自行定制服务请自行参阅 systemd 官方文档。
 
 ### 获取帮助
-+ 查看帮助信息请输入：```./mentohust -h```，修改参数请根据帮助信息操作。
-+ 例如修改用户名和密码（保存到配置文件）：```$ sudo ./mentohust -uUsername -pPassword -w```
-+ 例如修改用户名和密码（仅对当次认证有效）：```$ sudo ./mentohust -uUsername -pPassword```
++ 查看帮助信息请输入：`./mentohust -h`，修改参数请根据帮助信息操作。
++ 例如修改用户名和密码（保存到配置文件）：`$ sudo ./mentohust -uUsername -pPassword -w`
++ 例如修改用户名和密码（仅对当次认证有效）：`$ sudo ./mentohust -uUsername -pPassword`
 + 更详细的帮助信息请参考：http://wiki.ubuntu.org.cn/锐捷、赛尔认证MentoHUST
 
 ## 权责声明
